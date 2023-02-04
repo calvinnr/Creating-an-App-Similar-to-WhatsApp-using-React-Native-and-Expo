@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, FlatList } from 'react-native';
 import React from 'react';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
@@ -29,6 +29,17 @@ const styles = StyleSheet.create ({
         padding: 10,
         borderRadius: 10,
         maxWidth: '80%',
+
+        // Shadows
+        shadowColor: "#000",
+        shadowOffset: {
+	    width: 0,
+	    height: 1,
+},
+        shadowOpacity: 0.18,
+        shadowRadius: 1.00,
+
+        elevation: 1,
     },
     time: {
         color: 'gray',
