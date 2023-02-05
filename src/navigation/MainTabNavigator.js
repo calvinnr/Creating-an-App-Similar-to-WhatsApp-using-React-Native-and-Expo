@@ -14,15 +14,20 @@ const MainTabNavigator = () => {
             <Tab.Screen 
             name="Chats" 
             component={ChatsScreen} 
-            options={{ 
-            tabBarIcon: ({ color, size }) => ( 
-                <Ionicons name='chatbox' size={size} color={color}/>
+            options={({navigation}) => ({
+                tabBarIcon: ({ color, size }) => ( 
+                    <Ionicons name='chatbox' size={size} color={color} />
             ),
             headerRight: () => (
-                <Entypo name='new-message' size={18} color={'royalblue'} style={{marginRight: 15, marginTop: 10}}
+                <Entypo 
+                onPress={() => navigation.navigate('Contacts')}
+                name='new-message' 
+                size={18} 
+                color={'royalblue'} 
+                style={{ marginRight: 15, marginTop: 10}}
                 />
-            )
-            }}
+               )
+             })}
             />
             <Tab.Screen 
             name="Status" 
